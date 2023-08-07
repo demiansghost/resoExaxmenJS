@@ -41,7 +41,7 @@ Estudiante.belongsTo(Curso,{
     foreignKey: 'codigo_curso',
     targetKey:'codigo_curso'
 });
-const estudiantes = await Estudiante.findAll({
-    include:Curso
-});
-console.log(estudiantes);
+// const estudiantes = await Estudiante.findAll({
+//     include:Curso
+// });
+// console.log(estudiantes);

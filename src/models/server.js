@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import { routerEstudiantes } from '../routes/estudiantesRoutes.js';
 
 export default class Server{
     constructor(){
@@ -15,9 +16,10 @@ export default class Server{
         this.app.use(express.json());
     }
     routes(){
-        this.app.use('/', (req,res)=>{
-            res.send('hola server');
-        })
+        // this.app.use('/', (req,res)=>{
+        //     res.send('hola server');
+        // })
+        this.app.use('/estudiantes',routerEstudiantes);
     }
     listen(){
         this.app.listen(this.port,()=>{
